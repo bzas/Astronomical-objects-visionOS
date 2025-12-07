@@ -7,5 +7,5 @@
 
 struct Constants {
     
-    static let immersiveSpace = "PlanetImmersive"
+    static let immersiveSpace = "SpaceImmersive"
 }

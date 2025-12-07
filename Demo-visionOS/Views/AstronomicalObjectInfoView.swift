@@ -1,5 +1,5 @@
 //
-//  PlanetInfoView.swift
+//  AstronomicalObjectInfoView.swift
 //  Demo-visionOS
 //
 //  Created by Alfonso Boizas Crespo on 7/12/25.
@@ -9,11 +9,11 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct PlanetInfoView: View {
+struct AstronomicalObjectInfoView: View {
     
     // MARK: - Properties
 
-    var planet: Planet
+    var object: AstronomicalObject
     
     // MARK: - Immersive space handling
     
@@ -24,13 +24,13 @@ struct PlanetInfoView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(Planet.earth.name)
+                Text(AstronomicalObject.earth.name)
                     .font(.extraLargeTitle2)
                 
                 Spacer()
                 
                 Button(isImmersiveSpaceOpen ? "Hide 3D Model" : "Show 3D Model") {
-                    showOrHidePlanet()
+                    showOrHide()
                 }
             }
             Spacer()
@@ -38,7 +38,7 @@ struct PlanetInfoView: View {
         .padding(32)
     }
     
-    func showOrHidePlanet() {
+    func showOrHide() {
         Task {
             if isImmersiveSpaceOpen {
                 await dismissImmersiveSpace()

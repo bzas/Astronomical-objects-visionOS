@@ -1,5 +1,5 @@
 //
-//  PlanetRealityView.swift
+//  AstronomicalObjectRealityView.swift
 //  Demo-visionOS
 //
 //  Created by Alfonso Boizas Crespo on 7/12/25.
@@ -8,11 +8,11 @@
 import SwiftUI
 import RealityKit
 
-struct PlanetRealityView: View {
+struct AstronomicalObjectRealityView: View {
         
     // MARK: - Properties
     
-    var planet: Planet
+    var object: AstronomicalObject
 
     // MARK: - Rotation
     
@@ -22,11 +22,11 @@ struct PlanetRealityView: View {
     
     var body: some View {
         RealityView { content in
-            if let planetEntity = await planetEntity() {
-                content.add(planetEntity)
+            if let objectEntity = await objectEntity() {
+                content.add(objectEntity)
             }
         } update: { content in
-            updatePlanetRotation(anchorEntity: content.entities.first)
+            updateObjectRotation(anchorEntity: content.entities.first)
         }
         .gesture(
             DragGesture(minimumDistance: 0)
@@ -40,19 +40,19 @@ struct PlanetRealityView: View {
         )
     }
     
-    func planetEntity() async -> AnchorEntity? {
-        guard let planetEntity = try? await Entity(named: planet.modelName) else { return nil }
+    func objectEntity() async -> AnchorEntity? {
+        guard let objectEntity = try? await Entity(named: object.model3DInfo.modelName) else { return nil }
         
-        planetEntity.scale = SIMD3(x: 0.005, y: 0.005, z: 0.005)
-        planetEntity.generateCollisionShapes(recursive: true)
-        planetEntity.components.set(InputTargetComponent())
+        objectEntity.scale = object.model3DInfo.scale
+        objectEntity.generateCollisionShapes(recursive: true)
+        objectEntity.components.set(InputTargetComponent())
         
         let anchor = AnchorEntity(world: [1, 1.3, -2])
-        anchor.addChild(planetEntity)
+        anchor.addChild(objectEntity)
         return anchor
     }
     
-    func updatePlanetRotation(anchorEntity: Entity?) {
+    func updateObjectRotation(anchorEntity: Entity?) {
         guard let anchorEntity else { return }
         
         let yaw = simd_quatf(angle: rotationY * .pi / 180, axis: [0, 1, 0])

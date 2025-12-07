@@ -12,11 +12,11 @@ struct Demo_visionOSApp: App {
     
     var body: some Scene {
         ImmersiveSpace(id: Constants.immersiveSpace) {
-            PlanetRealityView(planet: .earth)
+            AstronomicalObjectRealityView(object: .earth)
         }
         
         WindowGroup {
-            PlanetInfoView(planet: .earth)
+            AstronomicalObjectInfoView(object: .earth)
         }
         .defaultSize(width: 500, height: 500)
     }
