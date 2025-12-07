@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct Demo_visionOSApp: App {
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        ImmersiveSpace(id: Constants.immersiveSpace) {
+            PlanetRealityView(planet: .earth)
         }
+        
+        WindowGroup {
+            PlanetInfoView(planet: .earth)
+        }
+        .defaultSize(width: 500, height: 500)
     }
 }
