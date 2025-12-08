@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4823BA022EE6D8710046D3A3 /* Application in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA012EE6D8710046D3A3 /* Application */; };
+		4823BA4D2EE6DA5A0046D3A3 /* Detail in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA4C2EE6DA5A0046D3A3 /* Detail */; };
+		4823BA512EE6DC620046D3A3 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA502EE6DC620046D3A3 /* Common */; };
+		4823BA532EE6DC670046D3A3 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA522EE6DC670046D3A3 /* Domain */; };
+		4823BA592EE6DD150046D3A3 /* LocalObjectImporter in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA582EE6DD150046D3A3 /* LocalObjectImporter */; };
+		487A69C62EE7071B00594620 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 487A69C52EE7071B00594620 /* AppState */; };
 		48C7F45C2EE5B76500DBF40A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 48C7F45B2EE5B76500DBF40A /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +36,12 @@
 		48C7F46E2EE5B76800DBF40A /* Exceptions for "Demo-visionOS" folder in "Demo-visionOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Core/Application,
+				Core/AppState,
+				Core/Common,
+				Core/Domain,
+				Core/LocalObjectImporter,
+				Features/Detail,
 				Info.plist,
 			);
 			target = 48C7F4552EE5B76400DBF40A /* Demo-visionOS */;
@@ -57,7 +69,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4823BA532EE6DC670046D3A3 /* Domain in Frameworks */,
 				48C7F45C2EE5B76500DBF40A /* RealityKitContent in Frameworks */,
+				4823BA4D2EE6DA5A0046D3A3 /* Detail in Frameworks */,
+				4823BA022EE6D8710046D3A3 /* Application in Frameworks */,
+				487A69C62EE7071B00594620 /* AppState in Frameworks */,
+				4823BA512EE6DC620046D3A3 /* Common in Frameworks */,
+				4823BA592EE6DD150046D3A3 /* LocalObjectImporter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,12 +89,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4823BA002EE6D8710046D3A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		48C7F44D2EE5B76400DBF40A = {
 			isa = PBXGroup;
 			children = (
 				48C7F4582EE5B76500DBF40A /* Demo-visionOS */,
 				48C7F4592EE5B76500DBF40A /* Packages */,
 				48C7F46B2EE5B76800DBF40A /* Demo-visionOSTests */,
+				4823BA002EE6D8710046D3A3 /* Frameworks */,
 				48C7F4572EE5B76500DBF40A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +145,12 @@
 			name = "Demo-visionOS";
 			packageProductDependencies = (
 				48C7F45B2EE5B76500DBF40A /* RealityKitContent */,
+				4823BA012EE6D8710046D3A3 /* Application */,
+				4823BA4C2EE6DA5A0046D3A3 /* Detail */,
+				4823BA502EE6DC620046D3A3 /* Common */,
+				4823BA522EE6DC670046D3A3 /* Domain */,
+				4823BA582EE6DD150046D3A3 /* LocalObjectImporter */,
+				487A69C52EE7071B00594620 /* AppState */,
 			);
 			productName = "Demo-visionOS";
 			productReference = 48C7F4562EE5B76500DBF40A /* Demo-visionOS.app */;
@@ -489,6 +521,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4823BA012EE6D8710046D3A3 /* Application */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Application;
+		};
+		4823BA4C2EE6DA5A0046D3A3 /* Detail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Detail;
+		};
+		4823BA502EE6DC620046D3A3 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
+		4823BA522EE6DC670046D3A3 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		4823BA582EE6DD150046D3A3 /* LocalObjectImporter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocalObjectImporter;
+		};
+		487A69C52EE7071B00594620 /* AppState */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppState;
+		};
 		48C7F45B2EE5B76500DBF40A /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
