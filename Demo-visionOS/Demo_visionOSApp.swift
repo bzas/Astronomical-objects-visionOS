@@ -11,13 +11,6 @@ import SwiftUI
 struct Demo_visionOSApp: App {
     
     var body: some Scene {
-        ImmersiveSpace(id: Constants.immersiveSpace) {
-            AstronomicalObjectRealityView(object: .earth)
-        }
-        
-        WindowGroup {
-            AstronomicalObjectInfoView(object: .earth)
-        }
-        .defaultSize(width: 500, height: 500)
+        DetailObjectScene()
     }
 }

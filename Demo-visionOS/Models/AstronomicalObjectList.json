@@ -1,0 +1,16 @@
+[
+    {
+        "id": 2,
+        "name": "Earth",
+        "model3DInfo": {
+            "modelName": "Earth",
+            "scale": [0.005, 0.005, 0.005]
+        },
+        "gravity": 9.81,
+        "distanceFromSun": 149.6,
+        "temperature": 15,
+        "yearDuration": 365.25,
+        "weight": 5.97e24,
+        "radius": 6371
+    }
+]

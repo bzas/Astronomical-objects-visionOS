@@ -5,7 +5,7 @@
 //  Created by Alfonso Boizas Crespo on 7/12/25.
 //
 
-struct Model3DInfo {
+struct Model3DInfo: Codable {
     
     let modelName: String
     let scale: SIMD3<Float>

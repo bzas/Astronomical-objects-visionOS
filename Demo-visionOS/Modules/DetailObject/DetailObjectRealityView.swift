@@ -1,5 +1,5 @@
 //
-//  AstronomicalObjectRealityView.swift
+//  DetailObjectRealityView.swift
 //  Demo-visionOS
 //
 //  Created by Alfonso Boizas Crespo on 7/12/25.
@@ -8,17 +8,16 @@
 import SwiftUI
 import RealityKit
 
-struct AstronomicalObjectRealityView: View {
+struct DetailObjectRealityView: View {
         
     // MARK: - Properties
     
-    var object: AstronomicalObject
+    @EnvironmentObject var viewModel: DetailObjectViewModel
 
     // MARK: - Rotation
     
     @State private var rotationY: Float = 0
     @State private var lastDrag = CGSize.zero
-    
     
     var body: some View {
         RealityView { content in
@@ -41,9 +40,11 @@ struct AstronomicalObjectRealityView: View {
     }
     
     func objectEntity() async -> AnchorEntity? {
-        guard let objectEntity = try? await Entity(named: object.model3DInfo.modelName) else { return nil }
+        guard let modelName = viewModel.object?.model3DInfo.modelName,
+              let modelScale = viewModel.object?.model3DInfo.scale,
+              let objectEntity = try? await Entity(named: modelName) else { return nil }
         
-        objectEntity.scale = object.model3DInfo.scale
+        objectEntity.scale = modelScale
         objectEntity.generateCollisionShapes(recursive: true)
         objectEntity.components.set(InputTargetComponent())
         

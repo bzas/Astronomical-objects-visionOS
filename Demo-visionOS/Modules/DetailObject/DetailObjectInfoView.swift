@@ -1,5 +1,5 @@
 //
-//  AstronomicalObjectInfoView.swift
+//  DetailObjectInfoView.swift
 //  Demo-visionOS
 //
 //  Created by Alfonso Boizas Crespo on 7/12/25.
@@ -9,22 +9,22 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct AstronomicalObjectInfoView: View {
+struct DetailObjectInfoView: View {
     
     // MARK: - Properties
 
-    var object: AstronomicalObject
-    
+    @EnvironmentObject var viewModel: DetailObjectViewModel
+
     // MARK: - Immersive space handling
     
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @State private var isImmersiveSpaceOpen: Bool = false
-    
+        
     var body: some View {
         VStack {
             HStack {
-                Text(AstronomicalObject.earth.name)
+                Text(viewModel.object?.name ?? "Unknown")
                     .font(.extraLargeTitle2)
                 
                 Spacer()
@@ -36,6 +36,11 @@ struct AstronomicalObjectInfoView: View {
             Spacer()
         }
         .padding(32)
+        .onAppear() {
+            Task {
+                await viewModel.load()
+            }
+        }
     }
     
     func showOrHide() {
