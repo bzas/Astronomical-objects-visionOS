@@ -15,9 +15,12 @@ public struct AppImmersiveView: View {
     @EnvironmentObject var appModel: AppModel
 
     // MARK: - Rotation
-    
+
     @State private var rotationY: Float = 0
     @State private var lastDrag = CGSize.zero
+    @State private var rotationTask: Task<Void, Never>?
+    
+    private let autoRotationSpeedDegreesPerSecond: Float = -15
     
     public init() {}
     
@@ -39,12 +42,32 @@ public struct AppImmersiveView: View {
                 }
                 .targetedToAnyEntity()
         )
+        .onAppear(perform: startAutoRotation)
+        .onDisappear(perform: stopAutoRotation)
     }
 }
 
 // MARK: - Private methods
 
 private extension AppImmersiveView {
+    
+    func startAutoRotation() {
+        rotationTask?.cancel()
+        rotationTask = Task { @MainActor in
+            let frameInterval = UInt64(1_000_000_000 / 60) // ~60 FPS
+            let stepPerFrame = autoRotationSpeedDegreesPerSecond / 60
+            
+            while !Task.isCancelled {
+                rotationY += stepPerFrame
+                try? await Task.sleep(nanoseconds: frameInterval)
+            }
+        }
+    }
+    
+    func stopAutoRotation() {
+        rotationTask?.cancel()
+        rotationTask = nil
+    }
     
     func updateObjectRotation(anchorEntity: Entity?) {
         guard let anchorEntity else { return }

@@ -16,8 +16,11 @@ public struct AstronomicalObject: Sendable {
     public let distanceFromSun: Float // Millions of Kms
     public let temperature: Float // Celsius
     public let yearDuration: Float // Days
+    public let dayLengthHours: Float // Hours
     public let weight: Float
     public let radius: Float // Kms
+    public let satellites: Int
+    public let artificialSatellitesEstimation: Int
     
     public init(
         id: Int,
@@ -27,8 +30,11 @@ public struct AstronomicalObject: Sendable {
         distanceFromSun: Float,
         temperature: Float,
         yearDuration: Float,
+        dayLengthHours: Float,
         weight: Float,
-        radius: Float
+        radius: Float,
+        satellites: Int,
+        artificialSatellitesEstimation: Int
     ) {
         self.id = id
         self.name = name
@@ -37,7 +43,10 @@ public struct AstronomicalObject: Sendable {
         self.distanceFromSun = distanceFromSun
         self.temperature = temperature
         self.yearDuration = yearDuration
+        self.dayLengthHours = dayLengthHours
         self.weight = weight
         self.radius = radius
+        self.satellites = satellites
+        self.artificialSatellitesEstimation = artificialSatellitesEstimation
     }
 }

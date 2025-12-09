@@ -14,6 +14,9 @@ struct AstronomicalObjectDTO: Codable {
     let distanceFromSun: Float // Millions of Kms
     let temperature: Float // Celsius
     let yearDuration: Float // Days
+    let dayLengthHours: Float // Hours
     let weight: Float
     let radius: Float // Kms
+    let satellites: Int
+    let artificialSatellitesEstimation: Int
 }

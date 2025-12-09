@@ -10,7 +10,10 @@
         "distanceFromSun": 149.6,
         "temperature": 15,
         "yearDuration": 365.25,
+        "dayLengthHours": 24.0,
         "weight": 5.97e24,
-        "radius": 6371
+        "radius": 6371,
+        "satellites": 1,
+        "artificialSatellitesEstimation": 9500
     }
 ]

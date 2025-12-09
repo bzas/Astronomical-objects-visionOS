@@ -20,8 +20,11 @@ extension AstronomicalObjectDTO {
             distanceFromSun: distanceFromSun,
             temperature: temperature,
             yearDuration: yearDuration,
+            dayLengthHours: dayLengthHours,
             weight: weight,
-            radius: radius
+            radius: radius,
+            satellites: satellites,
+            artificialSatellitesEstimation: artificialSatellitesEstimation
         )
     }
 }
