@@ -9,6 +9,7 @@ import SwiftUI
 import Detail
 import Common
 import AppState
+import ImmersiveView
 
 @main
 struct AppView: App {

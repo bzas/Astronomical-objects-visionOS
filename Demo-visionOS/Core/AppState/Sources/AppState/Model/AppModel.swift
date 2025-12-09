@@ -47,7 +47,7 @@ public final class AppModel: ObservableObject {
         }
     }
     
-    func currentEntity() async -> AnchorEntity? {
+    public func currentEntity() async -> AnchorEntity? {
         await appEntityLoader.loadEntity(object)
     }
 }

@@ -14,6 +14,7 @@
 		4823BA592EE6DD150046D3A3 /* LocalObjectImporter in Frameworks */ = {isa = PBXBuildFile; productRef = 4823BA582EE6DD150046D3A3 /* LocalObjectImporter */; };
 		487A69C62EE7071B00594620 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 487A69C52EE7071B00594620 /* AppState */; };
 		48C7F45C2EE5B76500DBF40A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 48C7F45B2EE5B76500DBF40A /* RealityKitContent */; };
+		48D826E12EE8C5F7000CEDAC /* ImmersiveView in Frameworks */ = {isa = PBXBuildFile; productRef = 48D826E02EE8C5F7000CEDAC /* ImmersiveView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 				Core/Domain,
 				Core/LocalObjectImporter,
 				Features/Detail,
+				Features/ImmersiveView,
 				Info.plist,
 			);
 			target = 48C7F4552EE5B76400DBF40A /* Demo-visionOS */;
@@ -70,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4823BA532EE6DC670046D3A3 /* Domain in Frameworks */,
+				48D826E12EE8C5F7000CEDAC /* ImmersiveView in Frameworks */,
 				48C7F45C2EE5B76500DBF40A /* RealityKitContent in Frameworks */,
 				4823BA4D2EE6DA5A0046D3A3 /* Detail in Frameworks */,
 				4823BA022EE6D8710046D3A3 /* Application in Frameworks */,
@@ -151,6 +154,7 @@
 				4823BA522EE6DC670046D3A3 /* Domain */,
 				4823BA582EE6DD150046D3A3 /* LocalObjectImporter */,
 				487A69C52EE7071B00594620 /* AppState */,
+				48D826E02EE8C5F7000CEDAC /* ImmersiveView */,
 			);
 			productName = "Demo-visionOS";
 			productReference = 48C7F4562EE5B76500DBF40A /* Demo-visionOS.app */;
@@ -548,6 +552,10 @@
 		48C7F45B2EE5B76500DBF40A /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		48D826E02EE8C5F7000CEDAC /* ImmersiveView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImmersiveView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

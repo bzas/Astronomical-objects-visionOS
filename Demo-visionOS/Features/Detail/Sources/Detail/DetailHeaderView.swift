@@ -26,7 +26,7 @@ struct DetailHeaderView: View {
             
             Spacer()
             
-            Button(appModel.isImmersiveSpaceOpen ? "Hide 3D Model" : "Show 3D Model") {
+            Button(appModel.isImmersiveSpaceOpen ? "Hide" : "Show") {
                 showOrHide()
             }
         }

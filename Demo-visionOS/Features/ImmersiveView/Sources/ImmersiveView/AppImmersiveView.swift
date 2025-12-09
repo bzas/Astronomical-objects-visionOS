@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealityKit
+import AppState
 
 public struct AppImmersiveView: View {
         
