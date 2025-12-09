@@ -20,15 +20,23 @@ struct DetailHeaderView: View {
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     
     var body: some View {
-        HStack {
-            Text(appModel.object?.name ?? "Unknown")
-                .font(.extraLargeTitle2)
-            
-            Spacer()
-            
-            Button(appModel.isImmersiveSpaceOpen ? "Hide" : "Show") {
-                showOrHide()
+        VStack {
+            HStack {
+                Text(appModel.object?.name ?? "")
+                    .font(.extraLargeTitle2)
+                
+                Spacer()
+                
+                Button(appModel.isImmersiveSpaceOpen ? "Hide" : "Show") {
+                    showOrHide()
+                }
             }
+            
+            Text(appModel.object?.description ?? "")
+                .font(.body)
+                .foregroundStyle(.tertiary)
+                .multilineTextAlignment(.leading)
+                .padding(.top, 12)
         }
     }
     

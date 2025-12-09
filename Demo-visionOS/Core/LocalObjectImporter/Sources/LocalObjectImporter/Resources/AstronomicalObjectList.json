@@ -2,6 +2,7 @@
     {
         "id": 2,
         "name": "Earth",
+        "description": "Our home planet with abundant liquid water, a nitrogen-oxygen atmosphere, and the only known world with life.",
         "model3DInfo": {
             "modelName": "Earth",
             "scale": [0.005, 0.005, 0.005]

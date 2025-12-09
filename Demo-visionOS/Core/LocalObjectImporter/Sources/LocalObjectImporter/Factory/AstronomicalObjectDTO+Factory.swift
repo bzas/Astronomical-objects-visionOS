@@ -16,6 +16,7 @@ extension AstronomicalObjectDTO {
             id: id,
             name: name,
             model3DInfo: model3DInfo.toDomain(),
+            description: description,
             gravity: gravity,
             distanceFromSun: distanceFromSun,
             temperature: temperature,

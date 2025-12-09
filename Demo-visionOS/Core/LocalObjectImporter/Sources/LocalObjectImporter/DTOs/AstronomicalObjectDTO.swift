@@ -10,6 +10,7 @@ struct AstronomicalObjectDTO: Codable {
     let id: Int
     let name: String
     let model3DInfo: Model3DInfoDTO
+    let description: String
     let gravity: Float
     let distanceFromSun: Float // Millions of Kms
     let temperature: Float // Celsius

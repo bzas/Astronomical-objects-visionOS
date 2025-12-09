@@ -12,6 +12,7 @@ public struct AstronomicalObject: Sendable {
     public let id: Int
     public let name: String
     public let model3DInfo: Model3DInfo
+    public let description: String
     public let gravity: Float
     public let distanceFromSun: Float // Millions of Kms
     public let temperature: Float // Celsius
@@ -26,6 +27,7 @@ public struct AstronomicalObject: Sendable {
         id: Int,
         name: String,
         model3DInfo: Model3DInfo,
+        description: String,
         gravity: Float,
         distanceFromSun: Float,
         temperature: Float,
@@ -39,6 +41,7 @@ public struct AstronomicalObject: Sendable {
         self.id = id
         self.name = name
         self.model3DInfo = model3DInfo
+        self.description = description
         self.gravity = gravity
         self.distanceFromSun = distanceFromSun
         self.temperature = temperature
