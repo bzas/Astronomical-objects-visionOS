@@ -24,8 +24,9 @@ public final class AppModel: ObservableObject {
     public static let immersiveSpaceName = "AppImmersiveSpace"
     @Published public var isImmersiveSpaceOpen = false
     
-    // MARK: - Model Rotation
+    // MARK: - Model transformations
 
+    @Published public var modelScale: Double = 1
     @Published var rotationY: Float = 0
     @Published var lastDrag = CGSize.zero
     @Published var rotationTask: Task<Void, Never>?
@@ -90,6 +91,18 @@ public final class AppModel: ObservableObject {
         
         for entity in anchorEntity.children {
             entity.transform.rotation = yaw
+        }
+    }
+    
+    public func updateObjectScale(anchorEntity: Entity?) {
+        guard let anchorEntity else { return }
+        
+        // Model has its own base scale; multiply by the user-selected factor.
+        let baseScale = object?.model3DInfo.scale ?? SIMD3<Float>(repeating: 1)
+        let finalScale = baseScale * Float(modelScale)
+        
+        for entity in anchorEntity.children {
+            entity.scale = finalScale
         }
     }
     

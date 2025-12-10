@@ -38,6 +38,6 @@ struct AppView: App {
             ObjectInfoView()
         }
         .environmentObject(appModel)
-        .defaultSize(width: 500, height: 500)
+        .defaultSize(width: 600, height: 600)
     }
 }

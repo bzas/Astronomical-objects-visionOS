@@ -13,11 +13,11 @@ import AppState
 public struct ObjectInfoView: View {
     
     // MARK: - Properties
-
+    
     @EnvironmentObject var appModel: AppModel
     
     public init() {}
-        
+    
     public var body: some View {
         VStack {
             HeaderView()
@@ -25,15 +25,20 @@ public struct ObjectInfoView: View {
             MetricsInfoView()
         }
         .padding(32)
+        .padding(.bottom)
         .environmentObject(appModel)
         .onAppear() {
             appModel.load()
         }
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomOrnament) {
-                BottomMenuView()
-                    .environmentObject(appModel)
+        .ornament(
+            visibility: .visible,
+            attachmentAnchor: .scene(.bottomFront)
+        ) {
+            HStack {
+                ScaleControlView()
+                RotationControlsView()
             }
+            .environmentObject(appModel)
         }
     }
 }

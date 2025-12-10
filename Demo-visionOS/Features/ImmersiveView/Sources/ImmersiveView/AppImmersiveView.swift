@@ -23,7 +23,9 @@ public struct AppImmersiveView: View {
                 content.add(objectEntity)
             }
         } update: { content in
-            appModel.updateObjectRotation(anchorEntity: content.entities.first)
+            let anchorEntity = content.entities.first
+            appModel.updateObjectRotation(anchorEntity: anchorEntity)
+            appModel.updateObjectScale(anchorEntity: anchorEntity)
         }
         .gesture(
             DragGesture(minimumDistance: 0)
