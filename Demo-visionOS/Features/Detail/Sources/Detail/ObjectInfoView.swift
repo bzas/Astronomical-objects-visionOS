@@ -1,5 +1,5 @@
 //
-//  DetailObjectInfoView.swift
+//  ObjectInfoView.swift
 //  Demo-visionOS
 //
 //  Created by Alfonso Boizas Crespo on 7/12/25.
@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 import AppState
 
-public struct DetailObjectInfoView: View {
+public struct ObjectInfoView: View {
     
     // MARK: - Properties
 
@@ -20,14 +20,20 @@ public struct DetailObjectInfoView: View {
         
     public var body: some View {
         VStack {
-            DetailHeaderView()
+            HeaderView()
             Spacer()
-            DetailMetricsInfoView()
+            MetricsInfoView()
         }
         .padding(32)
         .environmentObject(appModel)
         .onAppear() {
             appModel.load()
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomOrnament) {
+                BottomMenuView()
+                    .environmentObject(appModel)
+            }
         }
     }
 }

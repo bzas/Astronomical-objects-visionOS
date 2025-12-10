@@ -1,5 +1,5 @@
 //
-//  DetailHeaderView.swift
+//  HeaderView.swift
 //  Detail
 //
 //  Created by Alfonso Boizas Crespo on 9/12/25.
@@ -8,7 +8,7 @@
 import SwiftUI
 import AppState
 
-struct DetailHeaderView: View {
+struct HeaderView: View {
     
     // MARK: - Properties
 

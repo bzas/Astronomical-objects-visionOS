@@ -1,5 +1,5 @@
 //
-//  DetailMetricsInfoView.swift
+//  MetricsInfoView.swift
 //  Detail
 //
 //  Created by Alfonso Boizas Crespo on 9/12/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import AppState
 import Common
 
-struct DetailMetricsInfoView: View {
+struct MetricsInfoView: View {
     
     // MARK: - Properties
 

@@ -35,7 +35,7 @@ struct AppView: App {
         .environmentObject(appModel)
         
         WindowGroup {
-            DetailObjectInfoView()
+            ObjectInfoView()
         }
         .environmentObject(appModel)
         .defaultSize(width: 500, height: 500)
