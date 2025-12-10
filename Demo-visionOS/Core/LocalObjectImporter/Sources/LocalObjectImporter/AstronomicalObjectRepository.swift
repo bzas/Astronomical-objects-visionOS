@@ -12,7 +12,7 @@ public actor AstronomicalObjectRepository: AstronomicalObjectRepositoryProtocol 
     
     public init() {}
     
-    public func fetchInfo(_ object: AstronomicalObjectType) async throws -> AstronomicalObject {
+    public func fetchAll() async throws -> [AstronomicalObject] {
         guard let url = Bundle.module.url(
             forResource: "AstronomicalObjectList",
             withExtension: "json"
@@ -26,10 +26,6 @@ public actor AstronomicalObjectRepository: AstronomicalObjectRepositoryProtocol 
             from: data
         )
         
-        guard let astronomicalObject = astronomicalObjectList.first(where: { $0.id == object.rawValue }) else {
-            throw ObjectImporterError.missingInJson
-        }
-        
-        return astronomicalObject.toDomain()
+        return astronomicalObjectList.map { $0.toDomain() }
     }
 }

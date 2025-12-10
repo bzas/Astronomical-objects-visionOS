@@ -1,5 +1,41 @@
 [
     {
+        "id": 0,
+        "name": "Mercury",
+        "description": "The smallest planet, airless and cratered, orbiting closest to the Sun with extreme temperature swings.",
+        "model3DInfo": {
+            "modelName": "Mercury",
+            "scale": [0.002, 0.002, 0.002]
+        },
+        "gravity": 3.7,
+        "distanceFromSun": 57.9,
+        "temperature": 167,
+        "yearDuration": 88.0,
+        "dayLengthHours": 1407.6,
+        "weight": 3.30e23,
+        "radius": 2439.7,
+        "satellites": 0,
+        "artificialSatellitesEstimation": 0
+    },
+    {
+        "id": 1,
+        "name": "Venus",
+        "description": "A rocky world with a thick carbon dioxide atmosphere, intense greenhouse effect, and surface hot enough to melt lead.",
+        "model3DInfo": {
+            "modelName": "Venus",
+            "scale": [0.0048, 0.0048, 0.0048]
+        },
+        "gravity": 8.87,
+        "distanceFromSun": 108.2,
+        "temperature": 464,
+        "yearDuration": 224.7,
+        "dayLengthHours": 5832.5,
+        "weight": 4.87e24,
+        "radius": 6051.8,
+        "satellites": 0,
+        "artificialSatellitesEstimation": 0
+    },
+    {
         "id": 2,
         "name": "Earth",
         "description": "Our home planet with abundant liquid water, a nitrogen-oxygen atmosphere, and the only known world with life.",
@@ -16,5 +52,167 @@
         "radius": 6371,
         "satellites": 1,
         "artificialSatellitesEstimation": 9500
+    },
+    {
+        "id": 3,
+        "name": "Mars",
+        "description": "A cold desert planet with iron-rich dust, polar ice caps, and the tallest volcano and canyon in the solar system.",
+        "model3DInfo": {
+            "modelName": "Mars",
+            "scale": [0.0027, 0.0027, 0.0027]
+        },
+        "gravity": 3.71,
+        "distanceFromSun": 227.9,
+        "temperature": -63,
+        "yearDuration": 687.0,
+        "dayLengthHours": 24.6,
+        "weight": 6.42e23,
+        "radius": 3389.5,
+        "satellites": 2,
+        "artificialSatellitesEstimation": 19
+    },
+    {
+        "id": 4,
+        "name": "Jupiter",
+        "description": "The largest planet, a gas giant with powerful storms like the Great Red Spot and a strong magnetic field.",
+        "model3DInfo": {
+            "modelName": "Jupiter",
+            "scale": [0.02, 0.02, 0.02]
+        },
+        "gravity": 24.79,
+        "distanceFromSun": 778.5,
+        "temperature": -108,
+        "yearDuration": 4331.0,
+        "dayLengthHours": 9.9,
+        "weight": 1.90e27,
+        "radius": 69911,
+        "satellites": 95,
+        "artificialSatellitesEstimation": 2
+    },
+    {
+        "id": 5,
+        "name": "Saturn",
+        "description": "A gas giant famous for its complex ring system made of ice and rock fragments and dozens of moons.",
+        "model3DInfo": {
+            "modelName": "Saturn",
+            "scale": [0.018, 0.018, 0.018]
+        },
+        "gravity": 10.44,
+        "distanceFromSun": 1434.0,
+        "temperature": -139,
+        "yearDuration": 10747.0,
+        "dayLengthHours": 10.7,
+        "weight": 5.68e26,
+        "radius": 58232,
+        "satellites": 146,
+        "artificialSatellitesEstimation": 1
+    },
+    {
+        "id": 6,
+        "name": "Uranus",
+        "description": "An ice giant tipped on its side, with a faint ring system and methane-rich atmosphere giving it a blue-green hue.",
+        "model3DInfo": {
+            "modelName": "Uranus",
+            "scale": [0.012, 0.012, 0.012]
+        },
+        "gravity": 8.69,
+        "distanceFromSun": 2871.0,
+        "temperature": -195,
+        "yearDuration": 30589.0,
+        "dayLengthHours": 17.2,
+        "weight": 8.68e25,
+        "radius": 25362,
+        "satellites": 27,
+        "artificialSatellitesEstimation": 1
+    },
+    {
+        "id": 7,
+        "name": "Neptune",
+        "description": "A distant ice giant with supersonic winds, deep blue coloration, and a collection of dark storm systems.",
+        "model3DInfo": {
+            "modelName": "Neptune",
+            "scale": [0.012, 0.012, 0.012]
+        },
+        "gravity": 11.15,
+        "distanceFromSun": 4495.0,
+        "temperature": -200,
+        "yearDuration": 59800.0,
+        "dayLengthHours": 16.1,
+        "weight": 1.02e26,
+        "radius": 24622,
+        "satellites": 14,
+        "artificialSatellitesEstimation": 1
+    },
+    {
+        "id": 8,
+        "name": "Pluto",
+        "description": "A dwarf planet in the Kuiper Belt with a nitrogen ice surface, thin atmosphere, and a close companion moon, Charon.",
+        "model3DInfo": {
+            "modelName": "Pluto",
+            "scale": [0.001, 0.001, 0.001]
+        },
+        "gravity": 0.62,
+        "distanceFromSun": 5906.0,
+        "temperature": -225,
+        "yearDuration": 90560.0,
+        "dayLengthHours": 153.3,
+        "weight": 1.31e22,
+        "radius": 1188.0,
+        "satellites": 5,
+        "artificialSatellitesEstimation": 0
+    },
+    {
+        "id": 9,
+        "name": "Sun",
+        "description": "The G-type main-sequence star at the center of our solar system, providing the light and heat that sustains life on Earth.",
+        "model3DInfo": {
+            "modelName": "Sun",
+            "scale": [0.03, 0.03, 0.03]
+        },
+        "gravity": 274.0,
+        "distanceFromSun": 0.0,
+        "temperature": 5505.0,
+        "yearDuration": 0.0,
+        "dayLengthHours": 648.0,
+        "weight": 1.989e30,
+        "radius": 695700.0,
+        "satellites": 8,
+        "artificialSatellitesEstimation": 0
+    },
+    {
+        "id": 10,
+        "name": "Moon",
+        "description": "Earth's lone natural satellite with a cratered surface, basaltic maria, and phases driven by its orbit.",
+        "model3DInfo": {
+            "modelName": "Moon",
+            "scale": [0.0015, 0.0015, 0.0015]
+        },
+        "gravity": 1.62,
+        "distanceFromSun": 149.6,
+        "temperature": -20.0,
+        "yearDuration": 27.3,
+        "dayLengthHours": 708.7,
+        "weight": 7.35e22,
+        "radius": 1737.4,
+        "satellites": 0,
+        "artificialSatellitesEstimation": 8
+    },
+    {
+        "id": 11,
+        "name": "Black Hole",
+        "description": "A theoretical stellar remnant with an event horizon and gravitational pull so strong that not even light escapes.",
+        "model3DInfo": {
+            "modelName": "Black Hole",
+            "scale": [0.01, 0.01, 0.01]
+        },
+        "gravity": 1000.0,
+        "distanceFromSun": 26000.0,
+        "temperature": 1.0,
+        "yearDuration": 0.0,
+        "dayLengthHours": 0.0,
+        "weight": 8.2e36,
+        "radius": 12000000.0,
+        "satellites": 0,
+        "artificialSatellitesEstimation": 0
     }
 ]

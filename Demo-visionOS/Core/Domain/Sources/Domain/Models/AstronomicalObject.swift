@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AstronomicalObject: Sendable {
+public struct AstronomicalObject: Sendable, Identifiable {
     
     public let id: Int
     public let name: String

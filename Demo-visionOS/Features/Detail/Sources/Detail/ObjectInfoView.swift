@@ -26,19 +26,21 @@ public struct ObjectInfoView: View {
         }
         .padding(32)
         .padding(.bottom)
+        .padding(.leading, 32)
         .environmentObject(appModel)
         .onAppear() {
             appModel.load()
         }
-        .ornament(
-            visibility: .visible,
-            attachmentAnchor: .scene(.bottomFront)
-        ) {
+        .ornament(attachmentAnchor: .scene(.bottomFront)) {
             HStack {
                 ScaleControlView()
                 RotationControlsView()
             }
             .environmentObject(appModel)
+        }
+        .ornament(attachmentAnchor: .scene(.leadingFront)) {
+            ObjectSelectorView()
+                .environmentObject(appModel)
         }
     }
 }

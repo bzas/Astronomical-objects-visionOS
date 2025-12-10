@@ -7,7 +7,5 @@
 
 public protocol AstronomicalObjectRepositoryProtocol: Sendable {
     
-    func fetchInfo(
-        _ object: AstronomicalObjectType
-    ) async throws -> AstronomicalObject
+    func fetchAll() async throws -> [AstronomicalObject]
 }

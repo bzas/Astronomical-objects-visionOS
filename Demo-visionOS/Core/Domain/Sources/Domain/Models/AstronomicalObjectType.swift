@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AstronomicalObjectType: Int, Sendable {
+public enum AstronomicalObjectType: Int, Sendable, CaseIterable {
     
     // MARK: - Solar System planets
     

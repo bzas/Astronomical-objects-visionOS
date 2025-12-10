@@ -10,9 +10,7 @@ import Domain
 
 public protocol ImportObjectInfoUseCaseProtocol: Sendable {
     
-    func fetch(
-        _ object: AstronomicalObjectType
-    ) async throws -> AstronomicalObject
+    func fetchAll() async throws -> [AstronomicalObject]
 }
 
 actor ImportObjectInfoUseCase: ImportObjectInfoUseCaseProtocol {
@@ -23,9 +21,7 @@ actor ImportObjectInfoUseCase: ImportObjectInfoUseCaseProtocol {
         self.objectRepository = objectRepository
     }
     
-    func fetch(
-        _ object: AstronomicalObjectType
-    ) async throws -> AstronomicalObject {
-        try await objectRepository.fetchInfo(object)
+    func fetchAll() async throws -> [AstronomicalObject] {
+        try await objectRepository.fetchAll()
     }
 }

@@ -19,6 +19,8 @@ public final class AppModel: ObservableObject {
         
     @Published public var object: AstronomicalObject?
     
+    public var objectList: [AstronomicalObject] = []
+    
     // MARK: - Immersive Space
     
     public static let immersiveSpaceName = "AppImmersiveSpace"
@@ -54,7 +56,8 @@ public final class AppModel: ObservableObject {
     public func load() {
         Task {
             do {
-                object = try await importObjectInfoUseCase.fetch(.earth)
+                objectList = try await importObjectInfoUseCase.fetchAll()
+                object = objectList.first(where: { $0.id == AstronomicalObjectType.earth.rawValue })
             } catch {
                 print(error.localizedDescription)
             }
