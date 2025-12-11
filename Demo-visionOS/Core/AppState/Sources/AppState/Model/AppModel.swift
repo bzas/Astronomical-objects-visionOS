@@ -57,11 +57,15 @@ public final class AppModel: ObservableObject {
         Task {
             do {
                 objectList = try await importObjectInfoUseCase.fetchAll()
-                object = objectList.first(where: { $0.id == AstronomicalObjectType.earth.rawValue })
+                selectObject(id: AstronomicalObjectType.earth.rawValue)
             } catch {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    public func selectObject(id: Int) {
+        object = objectList.first(where: { $0.id == id })
     }
     
     public func currentEntity() async -> AnchorEntity? {

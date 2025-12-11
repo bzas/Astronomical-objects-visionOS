@@ -24,9 +24,9 @@ public struct ObjectInfoView: View {
             Spacer()
             MetricsInfoView()
         }
-        .padding(32)
+        .padding(40)
         .padding(.bottom)
-        .padding(.leading, 32)
+        .padding(.leading, 40)
         .environmentObject(appModel)
         .onAppear() {
             appModel.load()

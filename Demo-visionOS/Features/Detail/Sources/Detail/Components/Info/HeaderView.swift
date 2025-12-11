@@ -50,9 +50,7 @@ struct HeaderView: View {
                 switch result {
                 case .opened:
                     appModel.isImmersiveSpaceOpen = true
-                case .userCancelled, .error:
-                    appModel.isImmersiveSpaceOpen = false
-                @unknown default:
+                default:
                     appModel.isImmersiveSpaceOpen = false
                 }
             }

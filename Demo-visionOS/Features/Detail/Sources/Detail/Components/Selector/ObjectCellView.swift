@@ -25,7 +25,7 @@ struct ObjectCellView: View {
         .padding(4)
         .padding(.bottom, 2)
         .frame(width: 75, height: 75)
-        .background(isSelected ? .black.opacity(0.5) : .clear)
+        .background(isSelected ? .white.opacity(0.4) : .clear)
         .background(.regularMaterial)
         .clipShape(
             RoundedRectangle(

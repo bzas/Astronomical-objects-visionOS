@@ -5,7 +5,7 @@
         "description": "The smallest planet, airless and cratered, orbiting closest to the Sun with extreme temperature swings.",
         "model3DInfo": {
             "modelName": "Mercury",
-            "scale": [0.002, 0.002, 0.002]
+            "scale": [0.005, 0.005, 0.005]
         },
         "gravity": 3.7,
         "distanceFromSun": 57.9,
@@ -23,7 +23,7 @@
         "description": "A rocky world with a thick carbon dioxide atmosphere, intense greenhouse effect, and surface hot enough to melt lead.",
         "model3DInfo": {
             "modelName": "Venus",
-            "scale": [0.0048, 0.0048, 0.0048]
+            "scale": [0.005, 0.005, 0.005]
         },
         "gravity": 8.87,
         "distanceFromSun": 108.2,
@@ -59,7 +59,7 @@
         "description": "A cold desert planet with iron-rich dust, polar ice caps, and the tallest volcano and canyon in the solar system.",
         "model3DInfo": {
             "modelName": "Mars",
-            "scale": [0.0027, 0.0027, 0.0027]
+            "scale": [0.0035, 0.0035, 0.0035]
         },
         "gravity": 3.71,
         "distanceFromSun": 227.9,
@@ -77,7 +77,7 @@
         "description": "The largest planet, a gas giant with powerful storms like the Great Red Spot and a strong magnetic field.",
         "model3DInfo": {
             "modelName": "Jupiter",
-            "scale": [0.02, 0.02, 0.02]
+            "scale": [0.0025, 0.0025, 0.0025]
         },
         "gravity": 24.79,
         "distanceFromSun": 778.5,
@@ -95,7 +95,7 @@
         "description": "A gas giant famous for its complex ring system made of ice and rock fragments and dozens of moons.",
         "model3DInfo": {
             "modelName": "Saturn",
-            "scale": [0.018, 0.018, 0.018]
+            "scale": [0.003, 0.003, 0.003]
         },
         "gravity": 10.44,
         "distanceFromSun": 1434.0,
@@ -113,7 +113,7 @@
         "description": "An ice giant tipped on its side, with a faint ring system and methane-rich atmosphere giving it a blue-green hue.",
         "model3DInfo": {
             "modelName": "Uranus",
-            "scale": [0.012, 0.012, 0.012]
+            "scale": [0.003, 0.003, 0.003]
         },
         "gravity": 8.69,
         "distanceFromSun": 2871.0,
@@ -131,7 +131,7 @@
         "description": "A distant ice giant with supersonic winds, deep blue coloration, and a collection of dark storm systems.",
         "model3DInfo": {
             "modelName": "Neptune",
-            "scale": [0.012, 0.012, 0.012]
+            "scale": [0.003, 0.003, 0.003]
         },
         "gravity": 11.15,
         "distanceFromSun": 4495.0,
@@ -149,7 +149,7 @@
         "description": "A dwarf planet in the Kuiper Belt with a nitrogen ice surface, thin atmosphere, and a close companion moon, Charon.",
         "model3DInfo": {
             "modelName": "Pluto",
-            "scale": [0.001, 0.001, 0.001]
+            "scale": [0.005, 0.005, 0.005]
         },
         "gravity": 0.62,
         "distanceFromSun": 5906.0,
@@ -167,7 +167,7 @@
         "description": "The G-type main-sequence star at the center of our solar system, providing the light and heat that sustains life on Earth.",
         "model3DInfo": {
             "modelName": "Sun",
-            "scale": [0.03, 0.03, 0.03]
+            "scale": [0.0002, 0.0002, 0.0002]
         },
         "gravity": 274.0,
         "distanceFromSun": 0.0,
@@ -185,7 +185,7 @@
         "description": "Earth's lone natural satellite with a cratered surface, basaltic maria, and phases driven by its orbit.",
         "model3DInfo": {
             "modelName": "Moon",
-            "scale": [0.0015, 0.0015, 0.0015]
+            "scale": [0.005, 0.005, 0.005]
         },
         "gravity": 1.62,
         "distanceFromSun": 149.6,
@@ -203,7 +203,7 @@
         "description": "A theoretical stellar remnant with an event horizon and gravitational pull so strong that not even light escapes.",
         "model3DInfo": {
             "modelName": "Black Hole",
-            "scale": [0.01, 0.01, 0.01]
+            "scale": [0.0015, 0.0015, 0.0015]
         },
         "gravity": 1000.0,
         "distanceFromSun": 26000.0,
